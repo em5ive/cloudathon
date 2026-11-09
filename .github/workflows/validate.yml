@@ -1,0 +1,40 @@
+name: Local validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.17.0'
+      - name: Backend and migration unit tests
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/test-tools.py
+      - name: Repository artifact and credential checks
+        run: python scripts/check-repository-safety.py
+      - name: Frontend security checks
+        run: npm run check:frontend
+      - name: Build compatible Lambda packages
+        run: python scripts/build-lambdas.py
+      - name: Verify Lambda package contents
+        run: python scripts/verify-lambda-packages.py
+      - name: Terraform formatting
+        run: terraform -chdir=terraform fmt -check -recursive
+      - name: Initialize providers without state backend
+        run: terraform -chdir=terraform init -backend=false -input=false -lockfile=readonly
+      - name: Validate configuration (no AWS credentials)
+        run: terraform -chdir=terraform validate
+      - name: Mocked configuration safety plans (no AWS calls)
+        run: terraform -chdir=terraform test -no-color

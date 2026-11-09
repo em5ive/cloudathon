@@ -1,0 +1,79 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+crash.log
+crash.*.log
+.aws/
+.secrets/
+.env
+.env.*
+!.env.example
+credentials
+secrets.json
+*.secrets.json
+session-token*
+session_token*
+*.key
+*.p12
+*.pfx
+*.jks
+# Browser profiles and cookie/login databases must never enter source control.
+User Data/
+chrome-profile*/
+browser-profile*/
+Cookies
+Cookies-journal
+Login Data
+Login Data-journal
+Web Data
+Web Data-journal
+Local State
+__pycache__/
+*.py[cod]
+.venv/
+.build/
+artifacts/
+reports/
+frontend/config.json
+node_modules/
+.DS_Store
+# Commit .terraform.lock.hcl; it contains provider checksums, not credentials.
+
+# Terraform state and local providers
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+crash.log
+crash.*.log
+
+# AWS credentials and local environment
+.env
+.env.*
+!.env.example
+.aws/
+credentials
+
+# Generated builds and local caches
+.build/
+artifacts/*.zip
+*.zip
+__pycache__/
+*.pyc
+
+# Generated reports that may contain sensitive data
+reports/*.json
+reports/*.log
+
+# IDE and system files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Everyday electronics, thoughtfully chosen. Shop AnyCompany's retail demonstration.">
+  <title>AnyCo — Everyday, upgraded.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="announcement">A little ingenuity goes a long way. Meet your everyday essentials.</div>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="AnyCo home"><span class="brand-mark">a.</span> AnyCo<span class="brand-dot">®</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#account">My orders</a><a href="#support">Support</a>
+    </nav>
+    <button id="auth-button" class="button outline" type="button">Sign in</button>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">SMALL UPGRADES. BIG POSSIBILITIES.</p>
+        <h1 id="hero-title">Everyday,<br><span>upgraded.</span></h1>
+        <p>From your first circuit to your next adventure. Discover useful tech for the things you love doing.</p>
+        <a class="button primary" href="#shop">Find your next essential <span aria-hidden="true">↗</span></a>
+        <div class="hero-notes"><span>Thoughtfully selected</span><span>Simple, helpful support</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="device"><div class="device-camera"></div><div class="device-screen"><span>Make<br>something<br>good.</span><div class="screen-sun"></div></div></div><div class="floating-label">A brighter kind<br>of everyday.</div><span class="art-star">✳</span></div>
+    </section>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <section id="shop" class="shop-section" aria-labelledby="shop-title">
+      <div class="section-heading"><div><p class="eyebrow">THE GOOD STUFF</p><h2 id="shop-title">Ready for your everyday.</h2></div><label class="search-label">Find a product<input id="search" type="search" placeholder="Search essentials" autocomplete="off"></label></div>
+      <div class="shop-layout"><div id="products" class="product-grid" aria-live="polite"><p>Loading products…</p></div>
+        <aside class="cart" aria-labelledby="cart-title"><div class="cart-header"><h3 id="cart-title">Your bag</h3><span id="cart-count">0 items</span></div><div id="cart-items"><p class="muted">Good things start here. Add an essential to your bag.</p></div><div class="cart-total"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><button id="checkout" class="button primary" type="button" disabled>Place demo order <span aria-hidden="true">→</span></button><p class="fine-print">Demonstration store. No payment is collected and no products are shipped.</p></aside>
+      </div>
+    </section>
+    <section id="account" class="account-section" aria-labelledby="orders-title"><div class="section-heading"><div><p class="eyebrow">ALL IN ONE PLACE</p><h2 id="orders-title">Your orders.</h2></div><button id="refresh-orders" type="button" class="button outline">Refresh orders</button></div><div id="orders"><p class="muted">Sign in to see your orders and their latest status.</p></div></section>
+    <section id="support" class="support-section" aria-labelledby="support-title">
+      <div><p class="eyebrow">A LITTLE HELP, RIGHT HERE</p><h2 id="support-title">Let's figure<br>it out together.</h2><p>Ask about your order or get help with a product. Chat first, then choose whether to create a ticket for our support team.</p></div>
+      <div class="support-box">
+        <div id="support-answer" class="support-transcript" role="log" aria-label="Support conversation" aria-live="polite" aria-relevant="additions"></div>
+        <div id="support-facts" class="support-facts" aria-label="Verified details" hidden></div>
+        <p id="support-mode" class="fine-print">Sign in to chat. A support ticket is created only when you request one.</p>
+        <form id="support-form">
+          <label for="order-id">Order reference <span class="muted">(optional)</span></label><input id="order-id" name="order_id" placeholder="Paste your order ID" maxlength="36">
+          <label for="support-product">Product help <span class="muted">(optional)</span></label><select id="support-product" name="product_id"><option value="">Choose a product (optional)</option></select>
+          <label for="support-message">How can we help?</label><textarea id="support-message" name="message" rows="4" maxlength="2000" minlength="3" placeholder="Tell us what's on your mind…" required></textarea>
+          <button class="button primary" id="send-support" type="submit">Send message <span aria-hidden="true">↗</span></button>
+        </form>
+        <button id="escalate-support" class="button outline" type="button" hidden>Create support ticket for this request</button>
+        <button id="refresh-tickets" class="text-button" type="button">View my support tickets</button><div id="tickets"></div>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="./"><span class="brand-mark">a.</span> AnyCo</a><p>Useful things. New possibilities.</p><span>AnyCompany · Cloudathon 2026</span></footer>
+</body>
+</html>

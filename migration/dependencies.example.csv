@@ -1,0 +1,4 @@
+application,depends_on
+orders,identity
+orders,catalog
+support,orders

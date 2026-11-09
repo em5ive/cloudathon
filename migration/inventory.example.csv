@@ -1,0 +1,9 @@
+vm_id,application,os,owner,business_criticality,migration_strategy,license_model,virtualization_platform,platform_annual_allocated,os_annual_license,database_engine,database_annual_license,application_annual_license
+EXAMPLE-ID01,identity,Linux,platform,high,rehost,review-required,example-platform,,,none,,
+EXAMPLE-CAT01,catalog,Linux,retail,low,replatform,open-source-review,example-platform,,,PostgreSQL,,
+EXAMPLE-CAT02,catalog,Linux,retail,low,replatform,open-source-review,example-platform,,,none,,
+EXAMPLE-ORD01,orders,Windows,retail,high,refactor,BYOL-eligibility-review,example-platform,,,SQL-Server,,
+EXAMPLE-ORD02,orders,Windows,retail,high,refactor,BYOL-eligibility-review,example-platform,,,none,,
+EXAMPLE-HLP01,support,Linux,service-desk,medium,refactor,application-contract-review,example-platform,,,PostgreSQL,,
+EXAMPLE-HLP02,support,Linux,service-desk,medium,refactor,application-contract-review,example-platform,,,none,,
+EXAMPLE-WEB01,marketing,Linux,marketing,low,replatform,open-source-review,example-platform,,,none,,

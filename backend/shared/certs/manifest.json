@@ -1,0 +1,22 @@
+{
+  "us-west-2-bundle.pem": {
+    "source": "https://truststore.pki.rds.amazonaws.com/us-west-2/us-west-2-bundle.pem",
+    "sha256": "733b52e4b589586377e3e00f7c4625b61e14cbf0b5e08cace28b4f8aecc27c66"
+  },
+  "AmazonRootCA1.pem": {
+    "source": "https://www.amazontrust.com/repository/AmazonRootCA1.pem",
+    "sha256": "2c43952ee9e000ff2acc4e2ed0897c0a72ad5fa72c3d934e81741cbd54f05bd1"
+  },
+  "AmazonRootCA2.pem": {
+    "source": "https://www.amazontrust.com/repository/AmazonRootCA2.pem",
+    "sha256": "a3a7fe25439d9a9b50f60af43684444d798a4c869305bf615881e5c84a44c1a2"
+  },
+  "AmazonRootCA3.pem": {
+    "source": "https://www.amazontrust.com/repository/AmazonRootCA3.pem",
+    "sha256": "3eb7c3258f4af9222033dc1bb3dd2c7cfa0982b98e39fb8e9dc095cfeb38126c"
+  },
+  "AmazonRootCA4.pem": {
+    "source": "https://www.amazontrust.com/repository/AmazonRootCA4.pem",
+    "sha256": "b0b7961120481e33670315b2f843e643c42f693c7a1010eb9555e06ddc730214"
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"anyco-cloudathon","private":true,"type":"module","scripts":{"check:frontend":"node --check frontend/app.js && node --check frontend/auth.js && node scripts/test-frontend.mjs"}}

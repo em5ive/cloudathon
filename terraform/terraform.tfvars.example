@@ -1,0 +1,35 @@
+# COPY to terraform.tfvars (ignored). Do NOT insert access keys or secret values.
+aws_region          = "us-west-2"
+project_name        = "uh-retail-poc"
+owner               = "cloudathon-team"
+expected_account_id = "000000000000" # REPLACE after read-only STS verification.
+
+# REQUIRED: choose from read-only preflight output. This is a placeholder and
+# deliberately fails validation until replaced with an actually verified version.
+aurora_engine_version = "REPLACE_WITH_VERIFIED_VERSION"
+
+min_acu               = 0.5
+max_acu               = 4
+database_bootstrapped = false
+enable_bootstrap      = true
+
+# 8 runtime slots + 1 temporary bootstrap slot. Recheck live headroom; this is
+# not a quota increase or permission to apply. Match any preflight overrides.
+lambda_reserved_concurrency = {
+  products = 3
+  orders   = 3
+  support  = 2
+}
+
+# Leave disabled until regional model availability AND invocation permission are
+# verified. Listing models alone does not prove inference entitlement.
+bedrock_model_id  = ""
+bedrock_model_arn = ""
+
+# alarm_email = "operations@example.com"
+
+# After INITIAL deployment capture all alias versions and pin them before
+# building/applying a candidate. Publishing Support then leaves Products/Orders
+# and all existing live aliases unchanged. These numbers are examples only.
+# lambda_live_versions = { products = "1", orders = "1", support = "1" }
+# lambda_canary_versions = { support = { version = "2", weight = 0.10 } }

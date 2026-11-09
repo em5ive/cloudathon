@@ -1,0 +1,31 @@
+{
+  "scenario": "ILLUSTRATIVE FICTIONAL FLEET SCENARIO — replace every amount with validated evidence",
+  "currency": "USD",
+  "on_prem_annual": {
+    "virtualization_platform": 180000,
+    "operating_system_licenses": 60000,
+    "database_licenses": 90000,
+    "application_licenses": 70000,
+    "facility": 180000,
+    "hardware_support": 120000,
+    "operations_effort": 200000
+  },
+  "target_annual": {
+    "aws_services": 360000,
+    "retained_software_licenses": 80000,
+    "operations_effort": 160000
+  },
+  "one_time_transition": {
+    "migration_effort": 180000,
+    "refactoring_effort": 100000,
+    "data_transfer": 10000,
+    "incremental_dual_running": 60000
+  },
+  "assumptions": [
+    "No actual AnyCompany cost, VM count, discount or licensing invoice has been supplied.",
+    "All recurring costs are fully avoided only after workload retirement, contract termination and lease exit.",
+    "Operations-effort reductions are assumed economic benefits; cash savings depend on staffing and vendor spend decisions.",
+    "AWS target is a hypothetical fleet budget, not an extrapolation of the representative retail POC.",
+    "Licensing eligibility, minimum commitments and termination charges must be reviewed separately."
+  ]
+}

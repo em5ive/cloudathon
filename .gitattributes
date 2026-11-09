@@ -1,0 +1,2 @@
+# Public CA fingerprints must survive Windows/Linux checkouts byte for byte.
+backend/shared/certs/*.pem -text

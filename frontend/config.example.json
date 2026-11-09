@@ -1,0 +1,8 @@
+{
+  "apiBaseUrl": "https://REPLACE.execute-api.us-west-2.amazonaws.com",
+  "cognitoDomain": "https://REPLACE.auth.us-west-2.amazoncognito.com",
+  "clientId": "REPLACE",
+  "region": "us-west-2",
+  "redirectUri": "https://REPLACE.cloudfront.net/",
+  "userPoolId": "REPLACE"
+}
